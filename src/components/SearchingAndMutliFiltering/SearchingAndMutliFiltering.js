@@ -18,6 +18,7 @@ export default function SearchingAndMutliFiltering() {
 
   const [searchInput, setSearchInput] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+
   const filteredCourseData = data?.filter((item) => {
     const coursePriceMatches = item?.coursePrice === activeTab;
     const searchedData = item?.name === searchInput;
@@ -51,6 +52,8 @@ export default function SearchingAndMutliFiltering() {
 
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
+    setSearchInput("");
+    setSelectedCourseCategories([])
   };
 
   function keywordSearch(data, keyword) {
@@ -208,15 +211,15 @@ export default function SearchingAndMutliFiltering() {
           })}
         </div>
         {filteredCourseData && (
-          <div class="ais-Stats">
-            <span class="ais-Stats-text">
+          <div className="ais-Stats">
+            <span className="ais-Stats-text">
               {filteredCourseData?.length || searchResults?.length ? (
-                <p class="text-lg">
+                <p className="text-lg">
                   {filteredCourseData?.length || searchResults?.length} Results
                   Found
                 </p>
               ) : (
-                <p class="text-lg">No match found!</p>
+                <p className="text-lg">No match found!</p>
               )}
             </span>
           </div>

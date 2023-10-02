@@ -36,7 +36,7 @@ export default [
         "courseCategory": "Government Procurement"
     },
     {
-        "name": "Effective Contract Management",
+        "name": "Effective Contract Management Final",
         "description": "Learn how to effectively manage contracts in public procurement. This course covers contract administration, compliance monitoring, and performance evaluation.",
         "coursePrice": "PAID",
         "courseCategory": "Government Contract Management"

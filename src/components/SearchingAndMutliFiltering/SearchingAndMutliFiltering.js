@@ -54,6 +54,7 @@ export default function SearchingAndMutliFiltering() {
     setActiveTab(tabName);
     setSearchInput("");
     setSelectedCourseCategories([])
+    setVisibleItems(3)
   };
 
   function keywordSearch(data, keyword) {
